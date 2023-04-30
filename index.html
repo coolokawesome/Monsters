@@ -8,10 +8,34 @@
   src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
   integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./UIstyling.css"/>
     <title>Monsters</title>
 </head>
-<body>
+<body id="#body">
+    <div class="main-display"                    id="mainDisplay">
+      <div class="menu-selector"                 id="menuSelector">
+        <button class='menu-button fight-button' id="fightButton">FIGHT</button>
+        <button class='menu-button bag-button'   id="bagButton">BAG</button>
+        <button class='menu-button pkmn-button'  id="pkmnButton">PKMN</button>
+        <button class='menu-button run-button'   id="runButton">RUN</button>
+      </div>
+      <div class="fight-selector" style="display: none" id="fightSelector">
+      </div>
+      <div class="move-textbox" style="display: none" id="moveTextBox">
+      </div>
+    </div>
     
-    <script async src="./consoleloop.js"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script type="module" src="./monsters.js"></script>
+    <script type="module" src="./consoleloop.js"></script>
+    
 </body>
 </html>
