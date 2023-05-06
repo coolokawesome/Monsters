@@ -1,25 +1,40 @@
- let PlayerMonsters = [
-    {
-      id: 1,
-      name: 'CHARMANDER',
-      lvl: 5,
-      hp: 20,
-      xpBar: 200,
-      xp: 0,
-      moves: ['CUT', 'EMBER', '--', '--']
+ let Player = {
+  pokemon: {
+    p1: {
+      name: "Charmander",
+      type: "Fire",
+      moves: ["SCRATCH", "EMBER",  "--", "--"],
+      level: 5,
+      health: 20,
+      xp: 0  
+    },
+    p2: {
+      name: "Pidgey",
+      type: "Normal",
+      moves: ["Gust", "Sand-Attack", "--", "--"],
+      level: 5,
+      health: 20,
+      xp: 0  
+    },
+  }
+ }
+let Rival = {
+  pokemon: {
+    p1: {
+      name: "Squirtle",
+    type: "Water",
+    moves: ["Tackle", "Tail Whip"],
+    level: 5,
+    health: 20,
+    xp: 0,
     }
-  ];
- let RivalMonsters = [
-    {
-        id: 2,
-        name: 'SQUIRTLE',
-        lvl: 5,
-        hp: 20,
-        moves: ['TACKLE', 'BUBBLEBEAM']
-      }
-]
+  }
+}
+
+let CurrentPokemon = Player.pokemon.p1
+let RivalPokemon = Rival.pokemon.p1
+
   export {
-    PlayerMonsters,
-    RivalMonsters
+    Player, Rival, CurrentPokemon, RivalPokemon
   }
   

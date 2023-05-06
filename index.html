@@ -11,31 +11,33 @@
   <link rel="stylesheet" href="./UIstyling.css"/>
     <title>Monsters</title>
 </head>
-<body id="#body">
-    <div class="main-display"                    id="mainDisplay">
-      <div class="menu-selector"                 id="menuSelector">
-        <button class='menu-button fight-button' id="fightButton">FIGHT</button>
-        <button class='menu-button bag-button'   id="bagButton">BAG</button>
-        <button class='menu-button pkmn-button'  id="pkmnButton">PKMN</button>
-        <button class='menu-button run-button'   id="runButton">RUN</button>
-      </div>
-      <div class="fight-selector" style="display: none" id="fightSelector">
-      </div>
-      <div class="move-textbox" style="display: none" id="moveTextBox">
+<body id="body">    
+
+  <div id="screen" class="screen">
+    <div id="ui-top-container">
+      <div id="ui-top">
       </div>
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <script type="module" src="./monsters.js"></script>
-    <script type="module" src="./consoleloop.js"></script>
-    
+    <div id="ui-bottom-container">
+      <div id="ui-bottom">
+        <div id="ui-textbox">
+          <p id="ui-text"></p>
+          <div id="ui-moves">
+          </div>
+        </div>
+        <div id="item-selection">
+          <button id="fight">FIGHT</button>
+          <button id="pkmn">PKMN</button>
+          <button id="item">ITEM</button>
+          <button id="run">RUN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="module"  src="./chooseMove.js"></script>
+<script type="module"  src="./monsters.js"></script>
+<script type="module"  src="./menuSelection.js"></script>
+<script type="module"  src="./consoleloop.js"></script>
+<script type="module"  src="./battleCalculations.js"></script>
 </body>
 </html>
