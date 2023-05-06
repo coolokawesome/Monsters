@@ -44,13 +44,14 @@ setTimeout(function() {
             clearInterval(intervalId)
             }
         }, 50)
-    RivalMove()
+        RivalMove()
     }
-}, 3000)
-RivalMove()
+}, 4000)
+
 }
 //second function call that's called after our damage calculations
 function RivalMove() {
+    //generate a random time for a move select
     const timeInMilliseconds = new Date().getTime();
     const binaryTime = (timeInMilliseconds >>> 0).toString(2);
     const lastDigit = binaryTime[binaryTime.length - 1];
