@@ -21,20 +21,20 @@
 let Rival = {
   pokemon: {
     p1: {
-      name: "Squirtle",
-    type: "Water",
-    moves: ["Tackle", "Tail Whip"],
-    level: 5,
-    health: 20,
-    xp: 0,
+      name: "SQUIRTLE",
+      type: "Water",
+      moves: ["TACKLE", "TAIL WHIP"],
+      level: 5,
+      health: 20,
+      xp: 0,
     }
   }
 }
 
 let CurrentPokemon = Player.pokemon.p1
 let RivalPokemon = Rival.pokemon.p1
-
+let tailwhipCounter = 0
   export {
-    Player, Rival, CurrentPokemon, RivalPokemon
+    Player, Rival, CurrentPokemon, RivalPokemon, tailwhipCounter
   }
   

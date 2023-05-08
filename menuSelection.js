@@ -1,6 +1,7 @@
 import {ChooseMove} from './chooseMove.js'
 
 function menuSelection() {
+  $('#item-selection').show()
     //remove any previous event listeners
     $('#fight').off();
     $('#pkmn').off();
