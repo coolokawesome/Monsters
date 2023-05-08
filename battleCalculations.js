@@ -27,6 +27,8 @@ setTimeout(function() {
     if (ChosenMove == 'SCRATCH') {
         RivalPokemon.health = RivalPokemon.health - 4
         console.log('the move was Scratch! #2')
+        console.log(RivalPokemon.health, ' rival health is left!')
+        RivalMove()
     }
     if (ChosenMove == 'EMBER') {
         RivalPokemon.health = RivalPokemon.health - 3
@@ -34,7 +36,11 @@ setTimeout(function() {
         $('#ui-text').text('')
         TextPrompt = "It's not very effective..."
         let i = 0; 
+        let num = 50
         let intervalId = setInterval(function() {
+            if ($(document).click) {
+                num = 25
+            }
             if( i < TextPrompt.length) {
             $('#ui-text').append(TextPrompt.charAt(i))
             i++
@@ -44,7 +50,7 @@ setTimeout(function() {
             clearInterval(intervalId)
             RivalMove()
             }
-        }, 50)
+        }, num)
         
     }
 }, 3000)
@@ -66,8 +72,6 @@ function RivalMove() {
     //select rival move display
     if (selectedRivalMove == 'TACKLE') {
         let tailwhipCalc = tailwhipCounter + 4
-        CurrentPokemon.health = CurrentPokemon.health - (tailwhipCalc)
-        console.log(CurrentPokemon.health + ' current pokemon health left!')
         let TextPrompt = `${RivalPokemon.name} used TACKLE!`
         let i = 0; 
         setTimeout(() => {
@@ -79,6 +83,8 @@ function RivalMove() {
                 }
                 else
                 {
+                CurrentPokemon.health = CurrentPokemon.health - (tailwhipCalc)
+                console.log(CurrentPokemon.health, ' current pokemon health left!')
                 clearInterval(intervalId)
                 setTimeout(() => {
                     $('#ui-text').text('')
@@ -90,7 +96,7 @@ function RivalMove() {
     }
     if (selectedRivalMove == 'TAIL WHIP') {
         let tailwhipCounter =+ 1
-        console.log('tail whip counter at: '  + tailwhipCounter)
+        console.log('tail whip counter at: ', tailwhipCounter)
         let TextPrompt = `${RivalPokemon.name} used TAIL WHIP!`
         let i = 0; 
         setTimeout(() => {
